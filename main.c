@@ -37,8 +37,10 @@ int main(int argc, char **argv, char **argp)
 		inputs++;
 
 		while (i < cmdnum)
-		ret = exec_cmd(cmds, i, &head);
-		i += 1;
+		{
+			ret = exec_cmd(cmds, i, &head);
+			i += 1;
+		}
 
 		if (cmdnum > 0)
 			free_pp(cmds);
