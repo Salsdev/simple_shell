@@ -12,7 +12,7 @@ char *_tokstring(char *str, const char *delimeter, int whichf)
 {
 	static char *save;
 	char *_new = NULL;
-	int i = 0, (*func)(char *, const char *), loc, in_quotes = 0;
+	int i = 0, (*func)(const char *, const char *), loc, in_quotes = 0;
 
 	func = (whichf == 0) ? _strcmpd : _strcmps;
 		loc = (whichf) ? _lenstring(delimeter) - 1 : 0;

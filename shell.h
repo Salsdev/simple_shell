@@ -67,9 +67,9 @@ char **_arrdup(char **);
 void printdp(char **);
 
 int _geline(char **, size_t *, int);
-int _strcmpd(char *, const char *);
+int _strcmpd(const char *s1, const char *s2);
 char *_tokstring(char *str, const char *delimeter, int whichf);
-int _strcmps(char *, const char *);
+int _strcmps(const char *s1, const char *s2);
 
 int find_tok_occ(char *, char *);
 int find_n_rep(char **, char *, char *);
