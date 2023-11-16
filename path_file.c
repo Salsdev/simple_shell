@@ -22,7 +22,8 @@ char *get_file_path(char *name)
 	}
 	while (tokenized)
 	{
-		fpath = _malloc((_lenstring(tokenized) + _lenstring(name) + 1) * sizeof(char) + 1);
+		fpath = _malloc((_lenstring(tokenized) +
+					_lenstring(name) + 1) * sizeof(char) + 1);
 		_copystring(fpath, tokenized);
 		_catstring(fpath, "/");
 		_catstring(fpath, name);

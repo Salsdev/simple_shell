@@ -18,8 +18,5 @@ int _strcmps(const char *s1, const char *s2)
 		s1++;
 		s2++;
 	}
-/**
- * Return 0 when both strings are equal
- */
 return (0);
 }

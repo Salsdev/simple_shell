@@ -23,7 +23,8 @@ int handle_exit(char **cmd)
 		if (str_in)
 		{
 			errno = -1;
-			msg = _malloc(_lenstring("numeric argument required ") + _lenstring(cmd[1]) + 4);
+			msg = _malloc(_lenstring("numeric argument required ") +
+					_lenstring(cmd[1]) + 4);
 			_copystring(msg, "numeric argument required ");
 			smn = _malloc(_lenstring("exit: ") + _lenstring(cmd[1]) + 4);
 			_copystring(smn, "exit: "), _catstring(smn, cmd[1]);
@@ -34,7 +35,8 @@ int handle_exit(char **cmd)
 		else if (_toi(cmd[1]) < 0)
 		{
 			errno = -1;
-			msg = _malloc(_lenstring("numeric argument required ") + _lenstring(cmd[1]) + 4);
+			msg = _malloc(_lenstring("numeric argument required ") +
+					_lenstring(cmd[1]) + 4);
 			_copystring(msg, "numeric argument required ");
 			smn = _malloc(_lenstring("exit: ") + _lenstring(cmd[1]) + 4);
 			_copystring(smn, "exit: "), _catstring(smn, cmd[1]);

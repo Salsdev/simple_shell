@@ -22,7 +22,8 @@ int _chdir(char *path)
 	if (status < 0)
 	{
 		errno = -3;
-		msg = _malloc(_lenstring("No such file or directory ") + _lenstring(path) + 4);
+		msg = _malloc(_lenstring("No such file or directory ") +
+				_lenstring(path) + 4);
 		_copystring(msg, "No such file or directory ");
 		smn = _malloc(_lenstring("cd: ") + _lenstring(path) + 4);
 		_copystring(smn, "cd: "), _catstring(smn, path);
@@ -36,4 +37,5 @@ int _chdir(char *path)
 	_setenv("PWD", cdir, 1);
 	free(buf), free(cdir);
 	return (exitstat);
+
 }

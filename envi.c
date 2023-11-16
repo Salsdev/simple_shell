@@ -76,7 +76,9 @@ int _setenv(cch *name, cch *value, __attribute__((unused))int overwrite)
 	es = _malloc(_lenstring(name) + _lenstring(value) + 2);
 	if (es == NULL)
 		return (-1);
-	_copystring(es, (char *)name), _catstring(es, "="), _catstring(es, (char *)value);
+	_copystring(es, (char *)name);
+	_catstring(es, "=");
+	_catstring(es, (char *)value);
 	return ((_putenv(es) != 0) ? -1 : 0);
 	free(es);
 }

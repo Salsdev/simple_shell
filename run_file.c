@@ -27,7 +27,8 @@ int runscript(char *name)
 	if (fd < 0)
 	{
 		errno = -3;
-		errmsg = _malloc(_lenstring("No such file or directory ") + _lenstring(name) + 4);
+		errmsg = _malloc(_lenstring("No such file or directory ") +
+				_lenstring(name) + 4);
 		_copystring(errmsg, "No such file or directory ");
 		print_error(name, NULL, errmsg);
 		free(errmsg), free(path);
