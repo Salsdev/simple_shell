@@ -85,7 +85,7 @@ hsh main.c shell.c test_ls_2
 ## AUTHORS
 
 - [Salsdev](<https://github.com/Salsdev>)
-- [Olajumoke Olagunju](<https://github.com/OlajummyO>)
+- [Joseph Njoro](<https://github.com/Joseph-Njoro>)
 
 ## COPYRIGHT
 
